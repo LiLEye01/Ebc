@@ -7,14 +7,19 @@ public class Life : MonoBehaviour
     [SerializeField]
     Sprite[] hearts;
 
+    
+    public int lifes = 3;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        /*if (pierde el nivel)
+        {
+            se le resta una vida
+        }*/
     }
 }

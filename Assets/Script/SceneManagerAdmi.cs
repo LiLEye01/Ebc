@@ -14,20 +14,22 @@ public class SceneManagerAdmi : MonoBehaviour
     {
         
         Time.timeScale = 1f;
-        SceneManager.LoadScene(numRandom);
+        SceneManager.LoadScene(SceneName);
     }
 
     public void nextLevel()
     {
         numRandom = Random.Range(1, 5);
-        activeScene=SceneManager.GetActiveScene().buildIndex;
+        activeScene = SceneManager.GetActiveScene().buildIndex;
+       
         while (numRandom == activeScene)
         {
-            int nRandom=Random.Range(1, 5);
+            int nRandom = Random.Range(1, 5);
             numRandom = nRandom;
         }
-        
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ControlPanel()
