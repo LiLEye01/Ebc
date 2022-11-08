@@ -16,8 +16,8 @@ public class ColitionDetecter : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Toque");
+            sceneManager.ChangeScene(); ;
             Debug.Log(sceneManager.numRandom);
-            sceneManager.nextLevel();
 
         }
     }

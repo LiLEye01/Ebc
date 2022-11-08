@@ -19,12 +19,13 @@ public class SceneManagerAdmi : MonoBehaviour
 
     public void nextLevel()
     {
-        numRandom = Random.Range(1, 5);
+        numRandom = Random.Range(1, 6);
         activeScene = SceneManager.GetActiveScene().buildIndex;
        
         while (numRandom == activeScene)
         {
-            int nRandom = Random.Range(1, 5);
+            Debug.Log("Entre while");
+            int nRandom = Random.Range(1, 6);
             numRandom = nRandom;
         }
 
