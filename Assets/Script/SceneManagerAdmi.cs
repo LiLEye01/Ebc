@@ -10,7 +10,7 @@ public class SceneManagerAdmi : MonoBehaviour
     public int numRandom;
     int activeScene;
 
-    public void ChangeScene(int numRandom)
+    public void ChangeScene()
     {
         
         Time.timeScale = 1f;
