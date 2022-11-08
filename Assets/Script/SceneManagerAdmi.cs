@@ -7,14 +7,14 @@ public class SceneManagerAdmi : MonoBehaviour
 {
     public GameObject Panel;
 
-    int numRandom;
+    public int numRandom;
     int activeScene;
 
-    public void ChangeScene(string SceneName)
+    public void ChangeScene(int numRandom)
     {
         
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(numRandom);
     }
 
     public void nextLevel()
