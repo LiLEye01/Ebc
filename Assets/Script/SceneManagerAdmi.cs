@@ -7,24 +7,25 @@ public class SceneManagerAdmi : MonoBehaviour
 {
     public GameObject Panel;
 
-    int numRandom;
+    public int numRandom;
     int activeScene;
 
-    public void ChangeScene(string SceneName)
+    public void ChangeScene()
     {
         
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(numRandom);
     }
 
     public void nextLevel()
     {
-        numRandom = Random.Range(1, 5);
+        numRandom = Random.Range(1, 6);
         activeScene = SceneManager.GetActiveScene().buildIndex;
        
         while (numRandom == activeScene)
         {
-            int nRandom = Random.Range(1, 5);
+            Debug.Log("Entre while");
+            int nRandom = Random.Range(1, 6);
             numRandom = nRandom;
         }
 
