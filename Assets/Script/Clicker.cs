@@ -16,11 +16,9 @@ public class Clicker : MonoBehaviour
     
     void Start()
     {
-        timer = Random.Range(0, 21);
-        timer += click;
-        timerGame = GetComponent<Timer>();
-        click = Random.Range(0, 21);
-        textClicks.text = "Presiona el boton: " + click.ToString() + " estas veces";
+        timer = 10;
+        click = Random.Range(1, 21);
+        textClicks.text = "Presiona el boton: " + click.ToString() + "  veces";
     }
 
     // Update is called once per frame
@@ -29,18 +27,19 @@ public class Clicker : MonoBehaviour
         timer -= Time.deltaTime;
         textTimer.text = "" + timer.ToString("f0");
         Debug.Log(timer);
-    }
-
-    public void Click()
-    {
-        
         if (timer > 0.0f)
         {
-            click--;
+            
         }
         else if (timer < 0.0f)
         {
             timer = 0.0f;
         }
+    }
+
+    public void Click()
+    {
+        
+       
     }
 }
