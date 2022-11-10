@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ColitionDetecter : MonoBehaviour
 {
-    SceneManagerAdmi sceneManager;
+    
     void Start()
     {
-        sceneManager = GetComponent<SceneManagerAdmi>();
+        
     }
 
     // Update is called once per frame
@@ -16,9 +17,13 @@ public class ColitionDetecter : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Toque");
-            sceneManager.ChangeScene(); ;
-            Debug.Log(sceneManager.numRandom);
 
+            SceneManager.LoadScene("Lose");
+
+        }
+        else if (collision.gameObject.CompareTag("Win"))
+        {
+            SceneManager.LoadScene("Win");
         }
     }
 }

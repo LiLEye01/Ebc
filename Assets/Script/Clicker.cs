@@ -27,13 +27,13 @@ public class Clicker : MonoBehaviour
         timer -= Time.deltaTime;
         textTimer.text = "" + timer.ToString("f0");
         Debug.Log(timer);
-        if (timer > 0.0f)
+        if (timer > 0)
         {
             
         }
-        else if (timer < 0.0f)
+        else if (timer < 0)
         {
-            timer = 0.0f;
+            timer = 0;
         }
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Cables : MonoBehaviour
@@ -23,10 +24,12 @@ public class Cables : MonoBehaviour
         if (Input.GetMouseButton(0) && collision.CompareTag(tagsCables[index]))
         {
             //exito
+            SceneManager.LoadScene("Win");
         }
         else if(Input.GetMouseButton(1) && !collision.CompareTag(tagsCables[index]))
         {
             //fallo
+            SceneManager.LoadScene("Lose");
         }
     }
     void Update()

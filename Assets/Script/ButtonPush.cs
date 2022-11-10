@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ButtonPush : MonoBehaviour
@@ -29,10 +30,12 @@ public class ButtonPush : MonoBehaviour
         if(textRevision.text== "Presiona el boton")
         {
             //ganaste
+            SceneManager.LoadScene("Win");
         }
         else
         {
             //perdiste
+            SceneManager.LoadScene("Lose");
         }
     }
 }
