@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ColitionDetecter : MonoBehaviour
 {
-    public SceneManagerAdmi sceneManager;
+    SceneManagerAdmi sceneManager;
     void Start()
     {
-        
+        sceneManager = GetComponent<SceneManagerAdmi>();
     }
 
     // Update is called once per frame
