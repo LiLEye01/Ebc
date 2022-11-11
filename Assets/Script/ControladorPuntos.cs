@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puntos : MonoBehaviour
+public class ControladorPuntos : MonoBehaviour
 {
-    public static Puntos Instance;
-    [SerializeField] private float cantidadPuntos;
+    public static ControladorPuntos Instance;
 
+    [SerializeField] private float cantidadPuntos;
 
     private void Awake()
     {
-        if (Puntos.Instance == null)
+        if (ControladorPuntos.Instance == null)
         {
-            Puntos.Instance = this;
+            ControladorPuntos.Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else

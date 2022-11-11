@@ -8,6 +8,7 @@ using TMPro;
 public class Cables : MonoBehaviour
 {
     public string[] tagsCables;
+   [SerializeField] private float cantidadPuntos;
 
     [SerializeField]
     TextMeshProUGUI textCables;
@@ -24,12 +25,13 @@ public class Cables : MonoBehaviour
         if (Input.GetMouseButton(0) && collision.CompareTag(tagsCables[index]))
         {
             //exito
+            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
             SceneManager.LoadScene("Win");
         }
         else if(Input.GetMouseButton(0) && !collision.CompareTag(tagsCables[index]))
         {
             //fallo
-            SceneManager.LoadScene("Lose");
+           
         }
     }
 
