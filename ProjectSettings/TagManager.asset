@@ -8,6 +8,9 @@ TagManager:
   - verde
   - enemy
   - blanco
+  - tornillos
+  - resistencias
+  - led
   layers:
   - Default
   - TransparentFX
