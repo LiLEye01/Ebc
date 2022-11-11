@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Cables.unity
     guid: a2a3b025e967fbf488358281a3077546
   - enabled: 1
-    path: Assets/Scenes/Boton.unity
+    path: Assets/Scenes/Clicker.unity
     guid: fa19a84ae5136c141a01c1220520ca7a
   - enabled: 1
-    path: Assets/Scenes/Clicker.unity
+    path: Assets/Scenes/Boton.unity
     guid: f4632a63b6a7c924ba9aff31208f1f34
   - enabled: 1
     path: Assets/Scenes/Drag&Drop.unity

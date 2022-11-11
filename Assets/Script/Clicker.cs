@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using TMPro;
-using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class Clicker : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Clicker : MonoBehaviour
     public TextMeshProUGUI textTimer;
 
     Timer timerGame;
+    
     
     void Start()
     {
@@ -26,20 +28,21 @@ public class Clicker : MonoBehaviour
     {
         timer -= Time.deltaTime;
         textTimer.text = "" + timer.ToString("f0");
-        Debug.Log(timer);
-        if (timer > 0)
+        //Debug.Log(timer);
+        if (timer > 0 && click == 0)
         {
-            
+            SceneManager.LoadScene("Win");
         }
         else if (timer < 0)
         {
+            SceneManager.LoadScene("Lose");
             timer = 0;
         }
     }
 
     public void Click()
     {
-        
-       
+        click--;
+        Debug.Log(click);  
     }
 }
