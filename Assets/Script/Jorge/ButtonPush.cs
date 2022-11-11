@@ -6,6 +6,7 @@ using TMPro;
 
 public class ButtonPush : MonoBehaviour
 {
+    [SerializeField] private float cantidadPuntos;
     [SerializeField]
     TextMeshProUGUI textRevision;
     [SerializeField]
@@ -20,7 +21,7 @@ public class ButtonPush : MonoBehaviour
 
     void Start()
     {
-        gameManager = GetComponent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         index=Random.Range(0, decition.Length);
         textRevision.text = decition[index];
         
@@ -39,7 +40,9 @@ public class ButtonPush : MonoBehaviour
         
         if (timer == 0)
         {
+            gameManager.MinijuegoPerdido();
             SceneManager.LoadScene("Lose");
+           
         }
     }
 
@@ -48,7 +51,7 @@ public class ButtonPush : MonoBehaviour
         if(textRevision.text == "Presiona el boton" && timer > 0)
         {
             Debug.Log("Win");
-            //gameManager.SumarPuntos(50);
+            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
             SceneManager.LoadScene("Win");
         }
         else if(textRevision.text== "NO presiones el boton")
