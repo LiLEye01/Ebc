@@ -16,7 +16,7 @@ public class Cables : MonoBehaviour
     void Start()
     {
         index = Random.Range(0,tagsCables.Length);
-        textCables.text = ("");
+        textCables.text = ("Corta el cable: " + tagsCables[index]);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -26,7 +26,7 @@ public class Cables : MonoBehaviour
             //exito
             SceneManager.LoadScene("Win");
         }
-        else if(Input.GetMouseButton(1) && !collision.CompareTag(tagsCables[index]))
+        else if(Input.GetMouseButton(0) && !collision.CompareTag(tagsCables[index]))
         {
             //fallo
             SceneManager.LoadScene("Lose");
