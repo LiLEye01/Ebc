@@ -2,18 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance { get; private set; }
-        void Start()
-    {
-        
-    }
+    public GameObject[] Vida;
+    private int life;
+    private float puntos;
+    private TextMeshProUGUI textMesh;
 
-    // Update is called once per frame
-    void Update()
+	private void Start()
+	{
+        life = Vida.Length;
+        textMesh = GetComponent<TextMeshProUGUI>();
+
+    }
+	private void Update()
     {
-        
+        if (life < 1)
+        {
+            Destroy(Vida[0].gameObject);
+            SceneManager.LoadScene("Lose");
+        }
+        else if (life < 2)
+        {
+            Destroy(Vida[1].gameObject);
+        }
+        else if (life < 3)
+        {
+            Destroy(Vida[2].gameObject);
+        }
+        puntos += Time.deltaTime;
+        textMesh.text = puntos.ToString("0");  
+    }
+    public void SumarPuntos(float puntosEntrada) 
+    {
+        puntos += puntosEntrada;
     }
 }
