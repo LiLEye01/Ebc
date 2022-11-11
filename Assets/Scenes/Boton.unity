@@ -366,8 +366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textRevision: {fileID: 1977459968}
   decition:
-  - push
-  - nopush
+  - Pulsa el boton
+  - NO pulses el boton
 --- !u!212 &743228570
 SpriteRenderer:
   m_ObjectHideFlags: 0
