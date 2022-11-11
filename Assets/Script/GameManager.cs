@@ -6,37 +6,23 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] Vida;
-    private int life;
-    private float puntos;
-    private TextMeshProUGUI textMesh;
+    public static GameManager Instance { get; private set; }
+    public int PuntosTotales { get { return puntosTotales; } }
+    private int puntosTotales;
 
-	private void Start()
-	{
-        life = Vida.Length;
-        textMesh = GetComponent<TextMeshProUGUI>();
-
-    }
-	private void Update()
+    private void Awake()
     {
-        if (life < 1)
+        if(Instance == null)
         {
-            Destroy(Vida[0].gameObject);
-            SceneManager.LoadScene("Lose");
+            Instance = this;
         }
-        else if (life < 2)
+        else
         {
-            Destroy(Vida[1].gameObject);
+            Debug.Log("Más de un Game Manager en escena");
         }
-        else if (life < 3)
-        {
-            Destroy(Vida[2].gameObject);
-        }
-        puntos += Time.deltaTime;
-        textMesh.text = puntos.ToString("0");  
     }
-    public void SumarPuntos(float puntosEntrada) 
+    public void SumarPuntos(int PuntosASumar)
     {
-        puntos += puntosEntrada;
+        puntosTotales += PuntosASumar;
     }
 }
