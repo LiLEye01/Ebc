@@ -3,20 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ColitionDetecter : MonoBehaviour
+public class WinDetection : MonoBehaviour
 {
-
+    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("toque");
+            SceneManager.LoadScene("Win");
+            Debug.Log("Win");
         }
     }
 }
