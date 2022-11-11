@@ -16,11 +16,8 @@ public class DragDrop : MonoBehaviour
 
     bool isDrag;
 
-    public TextMeshProUGUI instructions;
-
     private void Start()
     {
-        instructions.text = "Arrastra cada objeto en su lugar";
         isDrag = false;
         cam = Camera.main;
     }

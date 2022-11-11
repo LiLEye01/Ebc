@@ -8,29 +8,38 @@ public class ButtonPush : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI textRevision;
+    [SerializeField]
+    TextMeshProUGUI textTimer;
 
     GameManager gameManager;
 
     public string[] decition;
     
     int index;
+    public float timer;
 
     void Start()
     {
         gameManager = GetComponent<GameManager>();
         index=Random.Range(0, decition.Length);
         textRevision.text = decition[index];
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        textTimer.text = "" + timer.ToString("f0");
+        timer -= 1 * Time.deltaTime;
+        if (timer < 1)
+        {
+            timer = 0;
+        }
     }
 
     public void CheckButton()
     {
-        if(textRevision.text== "Presiona el boton")
+        if(textRevision.text == "Presiona el boton" && timer > 0)
         {
             Debug.Log("Win");
             //gameManager.SumarPuntos(50);
@@ -39,6 +48,11 @@ public class ButtonPush : MonoBehaviour
         else if(textRevision.text== "NO presiones el boton")
         {
             //perdiste
+            SceneManager.LoadScene("Lose");
+        }
+
+        if (timer == 0)
+        {
             SceneManager.LoadScene("Lose");
         }
     }

@@ -32,6 +32,7 @@ public class Cables : MonoBehaviour
             SceneManager.LoadScene("Lose");
         }
     }
+
     void Update()
     {
         
