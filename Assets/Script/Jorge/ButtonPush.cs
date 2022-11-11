@@ -35,6 +35,12 @@ public class ButtonPush : MonoBehaviour
         {
             timer = 0;
         }
+        Debug.Log(timer);
+        
+        if (timer == 0)
+        {
+            SceneManager.LoadScene("Lose");
+        }
     }
 
     public void CheckButton()
@@ -50,10 +56,6 @@ public class ButtonPush : MonoBehaviour
             //perdiste
             SceneManager.LoadScene("Lose");
         }
-
-        if (timer == 0)
-        {
-            SceneManager.LoadScene("Lose");
-        }
+      
     }
 }
