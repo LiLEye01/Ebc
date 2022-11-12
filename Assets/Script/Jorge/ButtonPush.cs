@@ -38,14 +38,14 @@ public class ButtonPush : MonoBehaviour
         }
         Debug.Log(timer);
         
-        if (timer == 0)
+        if (timer == 0 && index == 0)
         {
             //gameManager.MinijuegoPerdido();
             SceneManager.LoadScene("Lose");
            
         }
 
-        if (textRevision.text == "NO Presiona el boton" && timer == 1)
+        if (timer == 0 && index == 1)
         {
             //ganaste
             SceneManager.LoadScene("Win");
