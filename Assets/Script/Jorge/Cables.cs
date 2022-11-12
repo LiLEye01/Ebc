@@ -25,13 +25,15 @@ public class Cables : MonoBehaviour
         if (Input.GetMouseButton(0) && collision.CompareTag(tagsCables[index]))
         {
             //exito
-            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
+            
             SceneManager.LoadScene("Win");
+            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
         }
         else if(Input.GetMouseButton(0) && !collision.CompareTag(tagsCables[index]))
         {
             //fallo
-           
+            SceneManager.LoadScene("Defeat");
+            ControladorPuntos.Instance.ReiniciarPuntos(cantidadPuntos);
         }
     }
 

@@ -41,7 +41,8 @@ public class ButtonPush : MonoBehaviour
         if (timer == 0 && index == 0)
         {
             //gameManager.MinijuegoPerdido();
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene("Defeat");
+            ControladorPuntos.Instance.ReiniciarPuntos(cantidadPuntos);
            
         }
 
@@ -64,7 +65,8 @@ public class ButtonPush : MonoBehaviour
         if (index == 1 && timer > 0)
         {
             //perdiste
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene("Defeat");
+            ControladorPuntos.Instance.ReiniciarPuntos(cantidadPuntos);
         }
 
 

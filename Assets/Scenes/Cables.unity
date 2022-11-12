@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 124006415}
   - component: {fileID: 124006419}
   - component: {fileID: 124006420}
+  - component: {fileID: 124006421}
   m_Layer: 0
   m_Name: Tijeras_0
   m_TagString: Untagged
@@ -438,6 +439,19 @@ MonoBehaviour:
   - verde
   cantidadPuntos: 100
   textCables: {fileID: 1791287555}
+--- !u!114 &124006421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124006414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df712bd4344f4c4c844fe692d98aa8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntos: {fileID: 605241234}
 --- !u!1 &167950626
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +462,6 @@ GameObject:
   m_Component:
   - component: {fileID: 167950628}
   - component: {fileID: 167950627}
-  - component: {fileID: 167950629}
   m_Layer: 0
   m_Name: ControladorPuntos
   m_TagString: Untagged
@@ -484,19 +497,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &167950629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167950626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4df712bd4344f4c4c844fe692d98aa8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puntos: {fileID: 605241234}
 --- !u!1 &235199179
 GameObject:
   m_ObjectHideFlags: 0

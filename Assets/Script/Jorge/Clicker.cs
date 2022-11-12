@@ -37,7 +37,8 @@ public class Clicker : MonoBehaviour
         }
         else if (timer < 0)
         {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene("Defeat");
+            ControladorPuntos.Instance.ReiniciarPuntos(cantidadPuntos);
             timer = 0;
         }
     }

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class ColitionDetecter : MonoBehaviour
 {
 
+  [SerializeField] private float cantidadPuntos;
+
     void Start()
     {
 
@@ -17,7 +19,8 @@ public class ColitionDetecter : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Toque");
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene("Defeat");
+            ControladorPuntos.Instance.ReiniciarPuntos(cantidadPuntos);
         }
     }
 }

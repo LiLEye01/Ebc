@@ -29,7 +29,7 @@ public class DetectaCosas : MonoBehaviour
         timer -= 1 * Time.deltaTime;
         if (timer < 1)
         {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene("Defeat");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

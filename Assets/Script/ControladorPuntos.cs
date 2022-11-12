@@ -25,4 +25,9 @@ public class ControladorPuntos : MonoBehaviour
     {
         cantidadPuntos += puntos;
     }
+
+    public void ReiniciarPuntos(float puntos)
+    {
+        cantidadPuntos = 0;
+    }
 }
