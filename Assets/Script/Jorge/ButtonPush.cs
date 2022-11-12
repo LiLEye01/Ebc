@@ -40,9 +40,15 @@ public class ButtonPush : MonoBehaviour
         
         if (timer == 0)
         {
-            gameManager.MinijuegoPerdido();
+            //gameManager.MinijuegoPerdido();
             SceneManager.LoadScene("Lose");
            
+        }
+
+        if (textRevision.text == "NO Presiona el boton" && timer == 1)
+        {
+            //ganaste
+            SceneManager.LoadScene("Win");
         }
     }
 
@@ -54,11 +60,12 @@ public class ButtonPush : MonoBehaviour
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
             SceneManager.LoadScene("Win");
         }
-        else if(textRevision.text== "NO presiones el boton")
+        if (textRevision.text == "NO Presiona el boton" && timer == 0)
         {
             //perdiste
             SceneManager.LoadScene("Lose");
         }
-      
+
+
     }
 }
