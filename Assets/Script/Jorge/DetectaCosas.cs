@@ -8,6 +8,7 @@ using TMPro;
 public class DetectaCosas : MonoBehaviour
 {
     bool tornillos = false;
+    [SerializeField] private float cantidadPuntos;
     bool resistencias = false;
     bool led = false;
 
@@ -52,6 +53,7 @@ public class DetectaCosas : MonoBehaviour
         if(tornillos == true && resistencias == true && led == true)
         {
             SceneManager.LoadScene("Win");
+            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
         }
     }
     

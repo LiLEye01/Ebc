@@ -9,6 +9,6 @@ public class Hud : MonoBehaviour
 
     public void Update()
     {
-        puntos.text = GameManager.Instance.PuntosTotales.ToString();
+        puntos.text = ControladorPuntos.Instance.cantidadPuntos.ToString();
     }
 }

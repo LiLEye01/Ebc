@@ -49,18 +49,19 @@ public class ButtonPush : MonoBehaviour
         {
             //ganaste
             SceneManager.LoadScene("Win");
+            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
         }
     }
 
     public void CheckButton()
     {
-        if(textRevision.text == "Presiona el boton" && timer > 0)
+        if(index == 0 && timer > 0)
         {
             Debug.Log("Win");
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
             SceneManager.LoadScene("Win");
         }
-        if (textRevision.text == "NO Presiona el boton" && timer == 0)
+        if (index == 1 && timer > 0)
         {
             //perdiste
             SceneManager.LoadScene("Lose");

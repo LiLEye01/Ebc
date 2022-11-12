@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Clicker : MonoBehaviour
 {
     public float click;
+    [SerializeField] private float cantidadPuntos;
     public float timer;
 
     public TextMeshProUGUI textClicks;
@@ -32,6 +33,7 @@ public class Clicker : MonoBehaviour
         if (timer > 0 && click == 0)
         {
             SceneManager.LoadScene("Win");
+            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
         }
         else if (timer < 0)
         {

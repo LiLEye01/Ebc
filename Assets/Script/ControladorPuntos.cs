@@ -6,7 +6,7 @@ public class ControladorPuntos : MonoBehaviour
 {
     public static ControladorPuntos Instance;
 
-    [SerializeField] private float cantidadPuntos;
+    [SerializeField] public float cantidadPuntos;
 
     private void Awake()
     {
