@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59327f05fa070841a9d93e3be474fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 628317354}
+  - {fileID: 1919207451}
+  - {fileID: 1201094949}
 --- !u!4 &53519622
 Transform:
   m_ObjectHideFlags: 0
@@ -202,8 +206,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 88, y: 0}
-  m_SizeDelta: {x: 109.6617, y: 27.4154}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 140.6156, y: 35.1539}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &200836160
 MonoBehaviour:
@@ -252,7 +256,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.5
+  m_fontSize: 31.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -454,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &628317355
 RectTransform:
   m_ObjectHideFlags: 0
@@ -648,7 +652,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -719,7 +723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1201094950
 RectTransform:
   m_ObjectHideFlags: 0
@@ -788,12 +792,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1211924609}
   m_Layer: 5
-  m_Name: Vida
+  m_Name: hearts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1211924609
 RectTransform:
   m_ObjectHideFlags: 0
@@ -846,6 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd41a4f6e7e02d4fb28e66ce3b11b86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadPuntos: 0
   textRevision: {fileID: 1977459968}
   textTimer: {fileID: 398828093}
   decition:
@@ -1300,7 +1305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1919207452
 RectTransform:
   m_ObjectHideFlags: 0
