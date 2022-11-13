@@ -34,6 +34,7 @@ public class Clicker : MonoBehaviour
         {
             SceneManager.LoadScene("Win");
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
+            ControladorPuntos.Instance.WinCondition();
         }
         else if (timer < 0)
         {

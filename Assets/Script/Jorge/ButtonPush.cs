@@ -51,6 +51,7 @@ public class ButtonPush : MonoBehaviour
             //ganaste
             SceneManager.LoadScene("Win");
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
+            ControladorPuntos.Instance.WinCondition();
         }
     }
 

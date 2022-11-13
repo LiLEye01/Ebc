@@ -28,6 +28,7 @@ public class Cables : MonoBehaviour
             
             SceneManager.LoadScene("Win");
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
+            ControladorPuntos.Instance.WinCondition();
         }
         else if(Input.GetMouseButton(0) && !collision.CompareTag(tagsCables[index]))
         {

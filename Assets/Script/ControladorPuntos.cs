@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorPuntos : MonoBehaviour
 {
@@ -29,5 +30,12 @@ public class ControladorPuntos : MonoBehaviour
     public void ReiniciarPuntos(float puntos)
     {
         cantidadPuntos = 0;
+    }
+    public void WinCondition()
+    {
+        if (cantidadPuntos >= 2000)
+        {
+           SceneManager.LoadScene("Victory");
+        }
     }
 }

@@ -54,6 +54,7 @@ public class DetectaCosas : MonoBehaviour
         {
             SceneManager.LoadScene("Win");
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);
+            ControladorPuntos.Instance.WinCondition();
         }
     }
     
